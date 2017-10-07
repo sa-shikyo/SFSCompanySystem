@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" language='ja'>
+{% load staticfiles %}
+{% load i18n %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>{% block title %}{% endblock %}</title>
+    {% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'sfs/css/companymanagesystem.css' %}">
+    {% endblock %}
+    {% block bootstrap %}
+    <script type="text/javascript" src="{% static 'bootstrap/js/jquery-1.11.3.min.js' %}"></script>
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    <div class="header">{% block header %}{% endblock %}</div>
+    <div class="container">{% block container %}{% endblock %}</div>
+    <div class="footer">{% block footer %}{% endblock %}</div>
+    {% endblock %}
+    <form id="jump_form" action="#" method="post">{% csrf_token %} {# 共通の遷移フォーム #}
+        <input type="hidden" name="parm_a" value="">
+        <input type="hidden" name="parm_b" value="">
+        <input type="hidden" name="parm_c" value="">
+        <input type="hidden" name="parm_d" value="">
+    </form>
+</body>
+</html>
