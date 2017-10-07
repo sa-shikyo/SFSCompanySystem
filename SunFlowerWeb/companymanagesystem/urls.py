@@ -17,5 +17,9 @@ from django.conf.urls import url
 from django.contrib import admin
 
 urlpatterns = [
+    # django admin
     url(r'^admin/', admin.site.urls),
+
+    # companymanagesystem
+    url(r'^login/$', cms_login, name='cms.login'),
 ]
