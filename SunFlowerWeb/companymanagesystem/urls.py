@@ -24,4 +24,5 @@ urlpatterns = [
 
     # companymanagesystem
     url(r'^login/$', cms_login, name='cms.login'),
+    url(r'^menu/$', cms_menu, name='cms.menu'),
 ]
