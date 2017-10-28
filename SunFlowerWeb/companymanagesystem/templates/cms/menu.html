@@ -10,18 +10,17 @@
 </header>
 <section class="user">
 	<div class="profile-img">
-		<p><img src="" alt="" height="40" width="40" />{{_('よこそう')}}</p>
+		<p>{{_('よこそう')}}</p>
 	</div>
 	<div class="buttons">
-		<button class="ico-font">&#9206;</button>
+		<button class="ico-font"></button>
 		<span class="button blue"><a href="#">Logout</a></span>
 	</div>
 </section>
-<!--</div>-->
 <nav style="height: 100px;">
 	<ul>
 		<li>
-			<a href="#"><span class="icon">&#128196;</span>{{_('社員情報')}}</a>
+			<a href="javascript: member_info();"><span class="icon"></span>{{_('社員情報')}}</a>
 			<ul class="submenu">
 				<li><a href="">新規</a></li>
 				<li><a href="">更新</a></li>
@@ -29,19 +28,19 @@
 			</ul>	
 		</li>
 		<li>
-			<a href="#"><span class="icon">&#127748;</span>{{_('備考')}}<span class="pip">0</span></a>
+			<a href="#"><span class="icon"></span>{{_('備考')}}<span class="pip">0</span></a>
 		</li>
 		<li>
-			<a href="#"><span class="icon">&#59160;</span>{{_('備考')}}</a>
+			<a href="#"><span class="icon"></span>{{_('備考')}}</a>
 		</li>
 		<li>
-			<a href="#"><span class="icon">&#128202;</span>{{_('備考')}}</a>
+			<a href="#"><span class="icon"></span>{{_('備考')}}</a>
 		</li>
 		<li>
-		    <a href="#"><span class="icon">&#128101;</span>{{_('備考')}}</a>
+		    <a href="#"><span class="icon"></span>{{_('備考')}}</a>
 		</li>
 		<li>
-			<a href="#"><span class="icon">&#9881;</span>{{_('備考')}}</a>
+			<a href="#"><span class="icon"></span>{{_('備考')}}</a>
 		</li>
 	</ul>
 </nav>
@@ -49,7 +48,7 @@
 	<div class="widget-container">
 		<section class="widget small">
 			<header> 
-				<span class="icon">&#128318;</span>
+				<span class="icon"></span>
 				<hgroup>
 					<h1>{{_('システムの状態')}}</h1>
 					<h2>{{_('実績のまとめ')}}</h2>
@@ -80,7 +79,7 @@
 		</section>
 		<section class="widget small">
 			<header> 
-				<span class="icon">&#128363;</span>
+				<span class="icon"></span>
 				<hgroup>
 					<h1>{{_('処理事項')}}</h1>
 					<h2>{{_('処理済')}} &amp; {{_('未処理')}}</h2>
@@ -88,22 +87,24 @@
 			</header>
 			<div class="content no-padding timeline">
 				<div class="tl-post">
-					<span class="icon">&#128206;</span>
+					<span class="icon"></span>
 					<p><a href="#">{{_('ユーザーA')}}</a>{{_('事項A')}}</p>
 				</div>
 				<div class="tl-post">
-					<span class="icon">&#59172;</span>
+					<span class="icon"></span>
 					<p><a href="#">{{_('ユーザーA')}}</a>{{_('事項A')}}</p>
 				</div>
 				<div class="tl-post">
-					<span class="icon">&#59170;</span>
+					<span class="icon"></span>
 					<p><a href="#">{{_('ユーザーA')}}</a>{{_('事項A')}}</p>
 				</div>
 				<div class="pie graph-area"></div>
 			</div>
-		</section>
+		</section></div>
+	</div>
 </section>
 </div>
+{% include 'cms/moudel/common_js.html' %}
 <script type="text/javascript">
 // Feature slider for graphs
 $('.cycle').cycle({

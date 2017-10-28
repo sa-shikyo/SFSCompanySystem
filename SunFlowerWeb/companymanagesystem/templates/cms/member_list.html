@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}{{_('社員情報一覧')}}{% endblock %}
+
+{% block body %}
+<div class="testing">
+<header class="main">
+    <h1><strong>{{_('SFS')}}</strong>&nbsp;&nbsp;{{_('社内管理システム')}}</h1>
+    <input type="text" value="search" />
+</header>
+<section class="user">
+    <div class="profile-img">
+        <p>{{_('よこそう')}}</p>
+    </div>
+    <div class="buttons">
+        <button class="ico-font"></button>
+        <span class="button blue"><a href="#">Logout</a></span>
+    </div>
+</section>
+<nav style="height: 100px;">
+    <ul>
+        <li>
+            <a href="javascript: member_info();"><span class="icon"></span>{{_('社員情報')}}</a>
+            <ul class="submenu">
+                <li><a href="">新規</a></li>
+                <li><a href="">更新</a></li>
+                <li><a href="">削除</a></li>
+            </ul>   
+        </li>
+        <li>
+            <a href="#"><span class="icon"></span>{{_('備考')}}<span class="pip">0</span></a>
+        </li>
+        <li>
+            <a href="#"><span class="icon"></span>{{_('備考')}}</a>
+        </li>
+        <li>
+            <a href="#"><span class="icon"></span>{{_('備考')}}</a>
+        </li>
+        <li>
+            <a href="#"><span class="icon"></span>{{_('備考')}}</a>
+        </li>
+        <li>
+            <a href="#"><span class="icon"></span>{{_('備考')}}</a>
+        </li>
+    </ul>
+</nav>
+<section class="content">
+    <div class="widget-container">
+        <section class="widget small">
+            <header> 
+                <span class="icon"></span>
+                <hgroup>
+                    <h1>{{_('社員情報の一覧')}}</h1>
+                    <h2>{{_('......')}}</h2>
+                </hgroup>
+            </header>
+            <div class="content">
+                <table>
+                    <tr>
+                        <th>{{_('社員コード')}}</th>
+                        <th>{{_('氏名')}}</th>
+                        <th>{{_('メールアドレス')}}</th>
+                        <th>{{_('携帯番号')}}</th>
+                        <th>{{_('詳細')}}</th>
+                    </tr>
+                    {% for one in member_list %}
+                    <tr>
+                    {% if one.code %}
+                        <td>{{one.code}}</td>
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                    {% if one.name %}
+                        <td>{{one.name}}</td>
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                    {% if one.email %}
+                        <td>{{one.email}}</td>
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                    <td></td>
+                    <td>{{_('詳しい')}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </section>
+    </div>
+</section>
+</div>
+<script type="text/javascript">
+// Feature slider for graphs
+$('.cycle').cycle({
+    fx: "scrollHorz",
+    timeout: 0,
+    slideResize: 0,
+    prev:    '.left-btn', 
+    next:    '.right-btn'
+});
+</script>
+{% endblock %}

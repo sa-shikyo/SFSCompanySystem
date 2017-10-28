@@ -1,0 +1,12 @@
+<script type="text/javascript">
+
+function member_info() {
+    var url = {% url 'cms.member_info' %};
+    var form = $("#jump_form");
+    if (form) {
+        $(form).attr("action", url);
+        $(form).submit();
+    }
+}
+
+</script>
